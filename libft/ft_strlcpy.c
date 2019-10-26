@@ -6,7 +6,7 @@
 /*   By: alaafia <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/22 15:06:34 by alaafia           #+#    #+#             */
-/*   Updated: 2019/10/23 17:09:01 by alaafia          ###   ########.fr       */
+/*   Updated: 2019/10/25 20:02:46 by alaafia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ size_t				ft_strlcpy(char *dst, const char *src, size_t max)
 
 	if (src == NULL)
 		return (0);
-	len = ft_strlen((char *)src);
+	len = ft_strlen(src);
 	if (len + 1 < max)
 		ft_memcpy(dst, src, len + 1);
 	else

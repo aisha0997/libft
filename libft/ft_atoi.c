@@ -6,7 +6,7 @@
 /*   By: alaafia <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/17 11:33:18 by alaafia           #+#    #+#             */
-/*   Updated: 2019/10/22 18:39:15 by alaafia          ###   ########.fr       */
+/*   Updated: 2019/10/26 19:33:31 by alaafia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ static int				ft_isspace(char c)
 
 int						ft_atoi(char *str)
 {
-	int					i;
-	int					sign;
+	int						i;
+	int						sign;
 	long long				n;
 
 	i = 0;

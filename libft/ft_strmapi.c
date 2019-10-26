@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alaafia <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/23 17:34:23 by alaafia           #+#    #+#             */
-/*   Updated: 2019/10/26 19:50:17 by alaafia          ###   ########.fr       */
+/*   Created: 2019/10/25 20:10:11 by alaafia           #+#    #+#             */
+/*   Updated: 2019/10/26 19:49:23 by alaafia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char				*ft_substr(char const *s, unsigned int start, size_t len)
+char				*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char				*str;
+	char						*str;
+	unsigned int				i;
 
-	if (!s)
+	i = 0;
+	if (!s || !(str = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1))))
 		return (NULL);
-	str = (char *)malloc(sizeof(char) * len + 1);
-	if (!str)
-		return (NULL);
-	ft_strlcpy(str, (char *)s + start, len + 1);
+	while (s[i])
+	{
+		str[i] = f(i, s[i]);
+		++i;
+	}
+	str[i] = '\0';
 	return (str);
 }
