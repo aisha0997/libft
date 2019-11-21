@@ -6,7 +6,7 @@
 /*   By: alaafia <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/20 15:54:19 by alaafia           #+#    #+#             */
-/*   Updated: 2019/11/01 17:37:30 by alaafia          ###   ########.fr       */
+/*   Updated: 2019/11/09 16:52:26 by alaafia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ typedef struct		s_list
 	void			*content;
 	struct s_list	*next;
 }					t_list;
-int					ft_atoi(char *str);
+int					ft_atoi(const char *str);
 int					ft_isalpha(int c);
 int					ft_isdigit(int c);
 int					ft_isalnum(int c);

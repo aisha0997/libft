@@ -1,26 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alaafia <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/23 17:34:23 by alaafia           #+#    #+#             */
-/*   Updated: 2019/10/26 19:50:17 by alaafia          ###   ########.fr       */
+/*   Created: 2019/11/01 12:10:30 by alaafia           #+#    #+#             */
+/*   Updated: 2019/11/10 16:02:12 by alaafia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char				*ft_substr(char const *s, unsigned int start, size_t len)
+void			ft_lstadd_front(t_list **alst, t_list *new)
 {
-	char				*str;
-
-	if (!s)
-		return (NULL);
-	str = (char *)malloc(sizeof(char) * len + 1);
-	if (!str)
-		return (NULL);
-	ft_strlcpy(str, (char *)s + start, len + 1);
-	return (str);
+	if (new)
+	{
+		new->next = *alst;
+		*alst = new;
+	}
 }
